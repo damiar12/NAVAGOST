@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navagost</title>
+    <link rel="icon" type="image/png" href="/logo.png">
+    <title>Navagost | Mantenimiento Industrial y Calderería en Castellón</title>
+    <meta name="description"
+        content="Especialistas en mantenimiento industrial, fabricación a medida, calderería y retrofitting en Castellón, Vila-real y Almazora. Asistencia técnica urgente 24/7.">
+    <meta name="keywords"
+        content="mantenimiento industrial Castellón, calderería Castellón, retrofitting, mantenimiento preventivo, mantenimiento correctivo, fabricación a medida, Vila-real, Almazora">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Navagost Metal Solutions">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Navagost | Mantenimiento Industrial y Calderería en Castellón">
+    <meta property="og:description"
+        content="Especialistas en mantenimiento industrial, fabricación a medida, calderería y retrofitting en Castellón. Asistencia técnica urgente 24/7.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Navagost Metal Solutions">
+    <!-- Datos estructurados JSON-LD (SEO local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Navagost Metal Solutions",
+      "description": "Especialistas en mantenimiento industrial, fabricación a medida, calderería y retrofitting en Castellón, Vila-real y Almazora.",
+      "url": "https://www.navagost.com",
+      "telephone": "+34652294082",
+      "email": "proyectos@navagost.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Camí d'Artana Vila-Real, 63",
+        "addressLocality": "Vila-real",
+        "addressRegion": "Castellón",
+        "addressCountry": "ES"
+      },
+      "areaServed": ["Castellón", "Vila-real", "Almazora"],
+      "serviceType": ["Mantenimiento Industrial", "Calderería", "Retrofitting", "Fabricación a Medida"]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --metal-gray: #2d3436;
             --steel-blue: #0a3d62;
             --safety-orange: #f39c12;
         }
+
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
-        h1, h2, h3, h4, .heading-font {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .heading-font {
             font-family: 'Oswald', sans-serif;
             text-transform: uppercase;
             letter-spacing: 0.025em;
         }
+
         .industrial-grid {
             background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
             background-size: 20px 20px;
         }
+
         /* Asegurar que el scroll no oculte la cabecera del título por el sticky navbar */
         section {
             scroll-margin-top: 80px;
         }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
@@ -42,10 +88,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/index.css">
 </head>
+
 <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

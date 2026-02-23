@@ -41,18 +41,15 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div 
-            className="flex items-center cursor-pointer group" 
+          <div
+            className="flex items-center cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold tracking-tighter text-white leading-none group-hover:text-orange-500 transition-colors uppercase">
-                NAVAGOST
-              </span>
-              <span className="text-[10px] text-orange-500 font-bold uppercase tracking-[0.2em] group-hover:text-white transition-colors">
-                Metal Solutions
-              </span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Navagost Metal Solutions - Logo"
+              className="h-16 w-auto object-contain brightness-0 invert hover:opacity-80 transition-opacity"
+            />
           </div>
 
           {/* Desktop Nav */}
@@ -67,7 +64,7 @@ const Navbar: React.FC = () => {
               </button>
             ))}
             <a
-              href="tel:+34964000000"
+              href="tel:+34652294082"
               className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-sm flex items-center space-x-2 text-xs font-bold transition-all shadow-lg border border-orange-500/20"
             >
               <Phone size={14} />
@@ -101,7 +98,7 @@ const Navbar: React.FC = () => {
               </button>
             ))}
             <a
-              href="tel:+34964000000"
+              href="tel:+34652294082"
               className="block w-full bg-orange-600 text-white px-4 py-4 rounded-sm flex items-center justify-center space-x-3 font-bold uppercase tracking-widest text-sm shadow-xl"
             >
               <Phone size={18} />
