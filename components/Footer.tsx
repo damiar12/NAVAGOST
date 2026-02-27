@@ -40,14 +40,14 @@ const Footer: React.FC = () => {
             <h4 className="font-bold uppercase tracking-widest text-xs mb-8 text-orange-500">Sede Central</h4>
             <ul className="space-y-4 text-slate-400 text-sm leading-relaxed">
               <li>Polígono Industrial<br />Provincia de Castellón, España</li>
-              <li><span className="text-white font-bold">Urgencias:</span> +34 600 00 00 00</li>
+              <li><span className="text-white font-bold">Urgencias:</span> +34 652294082</li>
               <li>proyectos@navagost.com</li>
             </ul>
           </div>
         </div>
         
         <div className="mt-20 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-slate-600 text-[10px] uppercase tracking-[0.2em] font-bold">
-          <p>© {new Date().getFullYear()} Navagost Metal Solutions S.L. · CIF B-12345678</p>
+          <p>© {new Date().getFullYear()} Navagost Metal Solutions S.L.</p>
           <div className="flex space-x-8 mt-4 md:mt-0">
             <a href="#" className="hover:text-orange-500">Privacidad</a>
             <a href="#" className="hover:text-orange-500">Legal</a>
