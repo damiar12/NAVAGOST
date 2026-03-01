@@ -72,11 +72,14 @@ const ContactSection: React.FC = () => {
             <div className="mt-12 pt-8 border-t border-slate-800">
               <p className="text-slate-500 text-xs uppercase tracking-widest mb-4">Síguenos</p>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/navagost-metal-solutions-3a04323b3"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn de Navagost"
-                className="w-11 h-11 bg-slate-800 flex items-center justify-center rounded-sm hover:bg-orange-600 transition-colors"
+                className="inline-flex items-center space-x-3 px-4 py-3 bg-slate-800 rounded-sm hover:bg-orange-600 transition-colors group"
               >
-                <Linkedin size={20} />
+                <Linkedin size={20} className="text-slate-300 group-hover:text-white transition-colors" />
+                <span className="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors uppercase tracking-wider">LinkedIn</span>
               </a>
             </div>
           </div>
