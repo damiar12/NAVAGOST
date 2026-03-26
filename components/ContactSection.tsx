@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, MessageCircle, Linkedin, Clock } from 'lucide-reac
 
 const ContactSection: React.FC = () => {
   const PHONE = '+34604817302';
-  const PHONE_DISPLAY = '+34 652 29 40 82';
+  const PHONE_DISPLAY = '+34 604 81 73 02';
   const EMAIL = 'proyectos@navagost.com';
   const WHATSAPP_MSG = encodeURIComponent('Hola, me gustaría solicitar información sobre vuestros servicios de mantenimiento industrial.');
 
