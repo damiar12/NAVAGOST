@@ -3,7 +3,7 @@ import React from 'react';
 import { Mail, Phone, MapPin, MessageCircle, Linkedin, Clock } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
-  const PHONE = '+34652294082';
+  const PHONE = '+34604817302';
   const PHONE_DISPLAY = '+34 652 29 40 82';
   const EMAIL = 'proyectos@navagost.com';
   const WHATSAPP_MSG = encodeURIComponent('Hola, me gustaría solicitar información sobre vuestros servicios de mantenimiento industrial.');
@@ -72,7 +72,7 @@ const ContactSection: React.FC = () => {
             <div className="mt-12 pt-8 border-t border-slate-800">
               <p className="text-slate-500 text-xs uppercase tracking-widest mb-4">Síguenos</p>
               <a
-                href="https://www.linkedin.com/in/navagost-metal-solutions-3a04323b3"
+                href="https://www.linkedin.com/in/navagost-metal-solutions-sl-3a04323b3"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn de Navagost"

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, Linkedin } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,7 +64,16 @@ const Navbar: React.FC = () => {
               </button>
             ))}
             <a
-              href="tel:+34652294082"
+              href="https://www.linkedin.com/in/navagost-metal-solutions-sl-3a04323b3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 hover:text-[#0A66C2] transition-colors flex items-center"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a
+              href="tel:+34604817302"
               className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-sm flex items-center space-x-2 text-xs font-bold transition-all shadow-lg border border-orange-500/20"
             >
               <Phone size={14} />
@@ -98,7 +107,16 @@ const Navbar: React.FC = () => {
               </button>
             ))}
             <a
-              href="tel:+34652294082"
+              href="https://www.linkedin.com/in/navagost-metal-solutions-sl-3a04323b3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-[#0A66C2] text-white px-4 py-3 rounded-sm flex items-center justify-center space-x-3 font-bold uppercase tracking-widest text-sm shadow-xl"
+            >
+              <Linkedin size={18} />
+              <span>SÍGUENOS EN LINKEDIN</span>
+            </a>
+            <a
+              href="tel:+34604817302"
               className="block w-full bg-orange-600 text-white px-4 py-4 rounded-sm flex items-center justify-center space-x-3 font-bold uppercase tracking-widest text-sm shadow-xl"
             >
               <Phone size={18} />
