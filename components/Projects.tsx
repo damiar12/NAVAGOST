@@ -78,7 +78,7 @@ const Projects: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 border-l-8 border-orange-600 pl-8">
           <h2 className="text-orange-600 font-bold tracking-[0.3em] text-sm mb-2 uppercase">Casos de éxito</h2>
-          <h3 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter">PROYECTOS Y REALIDADES</h3>
+          <h3 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter">PROYECTOS</h3>
           <p className="text-slate-500 mt-4 max-w-2xl font-medium">
             En Navagost no solo diseñamos soluciones, las hacemos realidad a pie de obra. Aquí mostramos algunos de nuestros últimos trabajos destacados.
           </p>
@@ -112,6 +112,36 @@ const Projects: React.FC = () => {
               'Soldaduras y anclajes bajo normativa estricta',
               'Integración total con estructuras existentes',
               'Ahorro de costes por paradas de obra',
+            ]}
+          />
+
+          <ProjectCard
+            icon={<Factory size={24} />}
+            title="Injertos y complementos a medida"
+            subtitle="Calderería técnica para integración en planta"
+            description="Fabricamos injertos y complementos metálicos listos para montaje, diseñados para encajar a la primera con tus tuberías y estructuras existentes."
+            tags={["Calderería", "Tuberías", "Integración"]}
+            videoSrc="/injerto-web.mp4"
+            benefits={[
+              'Integración perfecta con instalaciones existentes',
+              'Soldadura técnica y acabado industrial de alta resistencia',
+              'Mayor agilidad en obra y menos incidencias de montaje',
+              'Adaptación exacta para evitar soluciones improvisadas',
+            ]}
+          />
+
+          <ProjectCard
+            icon={<HardHat size={24} />}
+            title="Reparación de pistón de prensa"
+            subtitle="Mantenimiento industrial para evitar paradas"
+            description="Recuperamos la tolerancia y fiabilidad del pistón para devolver operatividad a la prensa en menos tiempo que un recambio nuevo."
+            tags={["Mantenimiento", "Prensas", "Retrofitting"]}
+            videoSrc="/reparacionpistonprensa-web.mp4"
+            benefits={[
+              'Reducción de tiempos frente a sustitución completa',
+              'Precisión de ajuste pistón-camisa para evitar desgaste prematuro',
+              'Ahorro de costes y extensión de vida útil del activo',
+              'Supervisión técnica directa con experiencia industrial',
             ]}
           />
         </div>
