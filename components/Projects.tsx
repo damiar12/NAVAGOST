@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle2, PlayCircle, HardHat, Factory } from 'lucide-react';
+import { CheckCircle2, HardHat, Factory } from 'lucide-react';
 
 type ProjectCardProps = {
   title: string;
@@ -38,12 +38,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <source src={videoSrc} type="video/mp4" />
           </video>
         )}
-        <div className="relative z-10 flex flex-col items-center text-white pointer-events-none">
-          <PlayCircle size={48} className="text-orange-500 mb-2" />
-          <span className="text-[10px] font-bold uppercase tracking-widest bg-slate-900/80 px-3 py-1 border border-slate-700">
-            {videoError ? 'Video pendiente de carga' : 'Video del proyecto'}
-          </span>
-        </div>
         <div className="absolute top-4 left-4 bg-orange-600 text-white p-2 z-20">{icon}</div>
       </div>
 
