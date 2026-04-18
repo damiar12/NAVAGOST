@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import WhyUs from './components/WhyUs';
 import Sectors from './components/Sectors';
+import Projects from './components/Projects';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
@@ -18,6 +19,9 @@ const App: React.FC = () => {
         </section>
         <section id="servicios" className="industrial-grid">
           <Services />
+        </section>
+        <section id="proyectos">
+          <Projects />
         </section>
         <section id="sectores" className="bg-slate-100">
           <Sectors />
