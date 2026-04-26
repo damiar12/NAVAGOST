@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
           {/* Estadísticas */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-slate-700/50 pt-12">
             <div>
-              <p className="text-4xl md:text-5xl font-bold text-white mb-2">+27 Años</p>
+              <p className="text-4xl md:text-5xl font-bold text-white mb-2"> + 15 Años</p>
               <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">Trayectoria Técnica</p>
             </div>
             <div>
