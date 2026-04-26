@@ -36,7 +36,7 @@ const WhyUs: React.FC = () => {
           <DepartmentCard 
             subtitle="Liderazgo Operativo"
             title="DIRECCIÓN DE TALLER Y MONTAJES"
-            description="Nuestro departamento de ejecución cuenta con una trayectoria acumulada de más de 27 años en el sector metalmecánico de Castellón. Gestionamos montajes estructurales complejos y reparaciones críticas, aplicando la experiencia adquirida en proyectos de alta exigencia para garantizar la fiabilidad en cada soldadura y ensamblaje."
+            description="Nuestro departamento de ejecución cuenta con una trayectoria acumulada de más de 15 años en el sector metalmecánico de Castellón. Gestionamos montajes estructurales complejos y reparaciones críticas, aplicando la experiencia adquirida en proyectos de alta exigencia para garantizar la fiabilidad en cada soldadura y ensamblaje."
             icon={<HardHat size={32} />}
           />
           <DepartmentCard 
