@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import {
   ArrowRight,
+  ChevronDown,
   CheckCircle2,
   Clock3,
   Hammer,
-  Home,
-  Image as ImageIcon,
   MessageCircle,
   Phone,
+  PlayCircle,
   ShieldCheck,
   ThermometerSun,
 } from 'lucide-react';
@@ -18,8 +18,26 @@ const PHONE_DISPLAY = '604 81 73 02';
 const WHATSAPP_URL =
   'https://wa.me/34604817302?text=Hola%2C%20he%20visto%20el%20folleto%20de%20panel%20s%C3%A1ndwich%20y%20quiero%20solicitar%20informaci%C3%B3n.';
 
-const PANEL_SANDWICH_HERO_IMAGE_SRC = '/panel-sandwich/hero.webp';
-const PANEL_SANDWICH_HERO_IMAGE_READY = false;
+// Introducir aqui el enlace de YouTube no listado del video principal.
+// Ejemplo valido: https://www.youtube.com/watch?v=XXXXXXXXXXX
+const PANEL_SANDWICH_VIDEO_URL = '';
+
+const getYouTubeEmbedUrl = (url: string): string | null => {
+  if (!url) return null;
+
+  try {
+    const parsedUrl = new URL(url);
+    const hostname = parsedUrl.hostname.replace('www.', '');
+    const videoId =
+      hostname === 'youtu.be'
+        ? parsedUrl.pathname.slice(1)
+        : parsedUrl.searchParams.get('v');
+
+    return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+  } catch {
+    return null;
+  }
+};
 
 const setMetaContent = (selector: string, content: string) => {
   const element = document.head.querySelector<HTMLMetaElement>(selector);
@@ -168,6 +186,7 @@ const otherServices = ['Estructuras metálicas.', 'Puertas y rejas.', 'Cerramien
 
 const PanelSandwichLanding: React.FC = () => {
   usePanelSandwichSeo();
+  const embedUrl = getYouTubeEmbedUrl(PANEL_SANDWICH_VIDEO_URL);
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
@@ -200,8 +219,45 @@ const PanelSandwichLanding: React.FC = () => {
       <main>
         <section className="relative overflow-hidden bg-slate-950 text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.18),transparent_32%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(15,23,42,0.9)_48%,rgba(2,6,23,0.98))]" />
-          <div className="relative mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-20">
-            <div>
+          <div className="relative mx-auto flex min-h-[calc(100vh-73px)] max-w-6xl flex-col justify-center px-4 py-8 sm:px-6 lg:px-8">
+            <div className="overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl">
+              {embedUrl ? (
+                <div className="aspect-video">
+                  <iframe
+                    src={embedUrl}
+                    title="Video de panel sándwich de Navagost"
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              ) : (
+                <div className="flex aspect-video min-h-[260px] flex-col items-center justify-center gap-5 bg-gradient-to-br from-slate-900 to-slate-950 p-8 text-center">
+                  <PlayCircle className="text-orange-500" size={64} />
+                  <div>
+                    <p className="text-2xl font-black text-white md:text-4xl">Vídeo pendiente de añadir</p>
+                    <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-slate-300 md:text-base">
+                      La página está preparada para mostrar aquí el vídeo principal en cuanto se añada la URL de YouTube.
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <a
+              href="#informacion-panel-sandwich"
+              className="mx-auto mt-6 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.24em] text-slate-300 transition-colors hover:text-orange-400 focus:outline-none focus:ring-4 focus:ring-orange-300"
+            >
+              Ver información
+              <ChevronDown size={18} />
+            </a>
+          </div>
+        </section>
+
+        <section id="informacion-panel-sandwich" className="relative overflow-hidden bg-slate-950 text-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(249,115,22,0.14),transparent_30%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(2,6,23,0.98))]" />
+          <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+            <div className="max-w-4xl">
               <p className="mb-5 inline-flex border-l-4 border-orange-500 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-orange-300">
                 Cubiertas en Castellón
               </p>
@@ -226,39 +282,6 @@ const PanelSandwichLanding: React.FC = () => {
               <p className="mt-6 text-sm font-bold text-slate-300">
                 Servicio en Castellón y alrededores · <span className="whitespace-nowrap">+34 {PHONE_DISPLAY}</span>
               </p>
-            </div>
-
-            <div className="relative">
-              <div className="absolute -inset-4 border border-orange-500/20" />
-              <div className="relative overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl">
-                <div
-                  className="min-h-[360px] bg-cover bg-center"
-                  style={{
-                    backgroundImage: PANEL_SANDWICH_HERO_IMAGE_READY
-                      ? `linear-gradient(135deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.38)), url("${PANEL_SANDWICH_HERO_IMAGE_SRC}")`
-                      : 'linear-gradient(135deg, rgba(15, 23, 42, 0.25), rgba(2, 6, 23, 0.85))',
-                  }}
-                >
-                  <div className="flex min-h-[360px] flex-col justify-between bg-gradient-to-br from-slate-950/90 via-slate-900/70 to-slate-950/50 p-8">
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="inline-flex items-center gap-2 bg-white px-3 py-2 text-xs font-black uppercase tracking-widest text-slate-950">
-                        <Home size={16} />
-                        Viviendas y villas
-                      </div>
-                      <div className="h-12 w-12 border-2 border-orange-500 bg-orange-600/20" />
-                    </div>
-                    <div className="max-w-sm">
-                      <ImageIcon className="mb-4 text-orange-400" size={34} />
-                      <p className="text-sm font-semibold leading-relaxed text-slate-200">
-                        Espacio preparado para una fotografía real de una vivienda con cubierta de panel sándwich.
-                      </p>
-                      <p className="mt-3 text-xs font-bold uppercase tracking-widest text-slate-400">
-                        Sustituible en {PANEL_SANDWICH_HERO_IMAGE_SRC}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
