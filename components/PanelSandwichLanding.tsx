@@ -7,7 +7,6 @@ import {
   Hammer,
   MessageCircle,
   Phone,
-  PlayCircle,
   ShieldCheck,
   ThermometerSun,
 } from 'lucide-react';
@@ -18,26 +17,7 @@ const PHONE_DISPLAY = '604 81 73 02';
 const WHATSAPP_URL =
   'https://wa.me/34604817302?text=Hola%2C%20he%20visto%20el%20folleto%20de%20panel%20s%C3%A1ndwich%20y%20quiero%20solicitar%20informaci%C3%B3n.';
 
-// Introducir aqui el enlace de YouTube no listado del video principal.
-// Ejemplo valido: https://www.youtube.com/watch?v=XXXXXXXXXXX
-const PANEL_SANDWICH_VIDEO_URL = '';
-
-const getYouTubeEmbedUrl = (url: string): string | null => {
-  if (!url) return null;
-
-  try {
-    const parsedUrl = new URL(url);
-    const hostname = parsedUrl.hostname.replace('www.', '');
-    const videoId =
-      hostname === 'youtu.be'
-        ? parsedUrl.pathname.slice(1)
-        : parsedUrl.searchParams.get('v');
-
-    return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
-  } catch {
-    return null;
-  }
-};
+const PANEL_SANDWICH_VIDEO_SRC = '/videopanelsand.mp4';
 
 const setMetaContent = (selector: string, content: string) => {
   const element = document.head.querySelector<HTMLMetaElement>(selector);
@@ -186,7 +166,6 @@ const otherServices = ['Estructuras metálicas.', 'Puertas y rejas.', 'Cerramien
 
 const PanelSandwichLanding: React.FC = () => {
   usePanelSandwichSeo();
-  const embedUrl = getYouTubeEmbedUrl(PANEL_SANDWICH_VIDEO_URL);
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
@@ -221,27 +200,19 @@ const PanelSandwichLanding: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.18),transparent_32%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(15,23,42,0.9)_48%,rgba(2,6,23,0.98))]" />
           <div className="relative mx-auto flex min-h-[calc(100vh-73px)] max-w-6xl flex-col justify-center px-4 py-8 sm:px-6 lg:px-8">
             <div className="overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl">
-              {embedUrl ? (
-                <div className="aspect-video">
-                  <iframe
-                    src={embedUrl}
-                    title="Video de panel sándwich de Navagost"
-                    className="h-full w-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-              ) : (
-                <div className="flex aspect-video min-h-[260px] flex-col items-center justify-center gap-5 bg-gradient-to-br from-slate-900 to-slate-950 p-8 text-center">
-                  <PlayCircle className="text-orange-500" size={64} />
-                  <div>
-                    <p className="text-2xl font-black text-white md:text-4xl">Vídeo pendiente de añadir</p>
-                    <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-slate-300 md:text-base">
-                      La página está preparada para mostrar aquí el vídeo principal en cuanto se añada la URL de YouTube.
-                    </p>
-                  </div>
-                </div>
-              )}
+              <video
+                className="aspect-video max-h-[calc(100vh-150px)] w-full bg-slate-950 object-contain"
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+                preload="metadata"
+                aria-label="Video de panel sándwich de Navagost"
+              >
+                <source src={PANEL_SANDWICH_VIDEO_SRC} type="video/mp4" />
+                Tu navegador no puede reproducir este vídeo.
+              </video>
             </div>
 
             <a
