@@ -8,8 +8,20 @@ import Sectors from './components/Sectors';
 import Projects from './components/Projects';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import PanelSandwichLanding from './components/PanelSandwichLanding';
+
+const getCurrentPath = () => {
+  if (typeof window === 'undefined') return '/';
+  return window.location.pathname.replace(/\/+$/, '') || '/';
+};
 
 const App: React.FC = () => {
+  const path = getCurrentPath();
+
+  if (path === '/panel-sandwich') {
+    return <PanelSandwichLanding />;
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
