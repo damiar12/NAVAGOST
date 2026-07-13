@@ -10,7 +10,6 @@ import {
   Phone,
   ShieldCheck,
   ThermometerSun,
-  Waves,
 } from 'lucide-react';
 import Footer from './Footer';
 
@@ -21,30 +20,6 @@ const WHATSAPP_URL =
 
 const PANEL_SANDWICH_HERO_IMAGE_SRC = '/panel-sandwich/hero.webp';
 const PANEL_SANDWICH_HERO_IMAGE_READY = false;
-
-// Introducir aqui el enlace de YouTube no listado cuando este disponible.
-// Ejemplo valido: https://www.youtube.com/watch?v=XXXXXXXXXXX
-const PANEL_SANDWICH_VIDEO_URL = '';
-
-// Anadir aqui fotografias reales de trabajos cuando existan en public/panel-sandwich/.
-const PANEL_SANDWICH_GALLERY_IMAGES: Array<{ src: string; alt: string }> = [];
-
-const getYouTubeEmbedUrl = (url: string): string | null => {
-  if (!url) return null;
-
-  try {
-    const parsedUrl = new URL(url);
-    const hostname = parsedUrl.hostname.replace('www.', '');
-    const videoId =
-      hostname === 'youtu.be'
-        ? parsedUrl.pathname.slice(1)
-        : parsedUrl.searchParams.get('v');
-
-    return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
-  } catch {
-    return null;
-  }
-};
 
 const setMetaContent = (selector: string, content: string) => {
   const element = document.head.querySelector<HTMLMetaElement>(selector);
@@ -194,9 +169,6 @@ const otherServices = ['Estructuras metálicas.', 'Puertas y rejas.', 'Cerramien
 const PanelSandwichLanding: React.FC = () => {
   usePanelSandwichSeo();
 
-  const embedUrl = getYouTubeEmbedUrl(PANEL_SANDWICH_VIDEO_URL);
-  const hasGalleryImages = PANEL_SANDWICH_GALLERY_IMAGES.length > 0;
-
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <header className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 backdrop-blur-md">
@@ -329,66 +301,6 @@ const PanelSandwichLanding: React.FC = () => {
                   <p className="text-base font-semibold leading-relaxed text-slate-700">{text}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-slate-950 py-20 text-white md:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionHeader
-              eyebrow="Trabajos realizados y vídeo"
-              title="Descubre cómo trabajamos"
-              description="Mira algunos de nuestros trabajos y consulta tu proyecto sin compromiso."
-            />
-
-            <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-              <div className="overflow-hidden border border-slate-800 bg-slate-900">
-                {embedUrl ? (
-                  <div className="aspect-video">
-                    <iframe
-                      src={embedUrl}
-                      title="Trabajos de panel sándwich de Navagost"
-                      className="h-full w-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
-                  </div>
-                ) : (
-                  <div className="flex min-h-[320px] flex-col items-start justify-between gap-8 p-8">
-                    <div>
-                      <Waves className="mb-6 text-orange-500" size={42} />
-                      <p className="max-w-xl text-2xl font-black leading-tight text-white">
-                        Próximamente podrás ver aquí nuestros trabajos de panel sándwich.
-                      </p>
-                      <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-400">
-                        La sección está preparada para insertar un vídeo de YouTube no listado en cuanto esté disponible.
-                      </p>
-                    </div>
-                    <ActionButton href={WHATSAPP_URL} icon={<MessageCircle size={20} />} external>
-                      Consultar por WhatsApp
-                    </ActionButton>
-                  </div>
-                )}
-              </div>
-
-              <div className="border border-slate-800 bg-slate-900 p-6">
-                <h3 className="text-2xl font-black uppercase text-white">Galería preparada</h3>
-                {hasGalleryImages ? (
-                  <div className="mt-6 grid gap-4">
-                    {PANEL_SANDWICH_GALLERY_IMAGES.map((image) => (
-                      <img key={image.src} src={image.src} alt={image.alt} className="aspect-video w-full object-cover" />
-                    ))}
-                  </div>
-                ) : (
-                  <div className="mt-6 border border-dashed border-slate-700 p-6">
-                    <ImageIcon className="mb-4 text-orange-500" size={32} />
-                    <p className="text-sm leading-relaxed text-slate-300">
-                      Aquí se podrán añadir fotografías reales de cubiertas realizadas. No se muestran proyectos de
-                      ejemplo para evitar atribuir trabajos no documentados.
-                    </p>
-                  </div>
-                )}
-              </div>
             </div>
           </div>
         </section>
