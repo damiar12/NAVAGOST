@@ -199,9 +199,9 @@ const PanelSandwichLanding: React.FC = () => {
         <section className="relative overflow-hidden bg-slate-950 text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.18),transparent_32%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(15,23,42,0.9)_48%,rgba(2,6,23,0.98))]" />
           <div className="relative mx-auto flex min-h-[calc(100vh-73px)] max-w-6xl flex-col justify-center px-4 py-8 sm:px-6 lg:px-8">
-            <div className="overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl">
+            <div className="mx-auto w-full max-w-[430px] overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl md:max-w-[520px]">
               <video
-                className="aspect-video max-h-[calc(100vh-150px)] w-full bg-slate-950 object-contain"
+                className="aspect-[9/16] max-h-[calc(100vh-150px)] w-full bg-slate-950 object-cover"
                 autoPlay
                 muted
                 loop
