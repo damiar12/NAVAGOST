@@ -33,6 +33,7 @@ const Footer: React.FC = () => {
               <li><button onClick={() => scrollTo('servicios')} className="hover:text-white transition-colors">Maquinaria a medida</button></li>
               <li><button onClick={() => scrollTo('servicios')} className="hover:text-white transition-colors">Retrofitting</button></li>
               <li><button onClick={() => scrollTo('contacto')} className="hover:text-white transition-colors">Oficina Técnica</button></li>
+              <li><a href="/carpinteria-metalica" className="hover:text-white transition-colors">Carpintería Metálica</a></li>
             </ul>
           </div>
 

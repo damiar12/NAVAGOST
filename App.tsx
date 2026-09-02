@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import PanelSandwichLanding from './components/PanelSandwichLanding';
+import CarpinteriaMetalicaLanding from './components/CarpinteriaMetalicaLanding';
 
 const getCurrentPath = () => {
   if (typeof window === 'undefined') return '/';
@@ -20,6 +21,10 @@ const App: React.FC = () => {
 
   if (path === '/panel-sandwich') {
     return <PanelSandwichLanding />;
+  }
+
+  if (path === '/carpinteria-metalica') {
+    return <CarpinteriaMetalicaLanding />;
   }
 
   return (
