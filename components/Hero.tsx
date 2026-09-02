@@ -58,22 +58,6 @@ const Hero: React.FC = () => {
               VER SERVICIOS
             </button>
           </div>
-
-          {/* Estadísticas */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-slate-700/50 pt-12">
-            <div>
-              <p className="text-4xl md:text-5xl font-bold text-white mb-2"> + 15 Años</p>
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">Trayectoria Técnica</p>
-            </div>
-            <div>
-              <p className="text-4xl md:text-5xl font-bold text-white mb-2">24/7</p>
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">Respuesta Urgente</p>
-            </div>
-            <div className="hidden md:block">
-              <p className="text-4xl md:text-5xl font-bold text-white mb-2">3D</p>
-              <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">Oficina Técnica Avanzada</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
