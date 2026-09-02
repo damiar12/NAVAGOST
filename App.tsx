@@ -6,6 +6,7 @@ import Services from './components/Services';
 import WhyUs from './components/WhyUs';
 import Sectors from './components/Sectors';
 import Projects from './components/Projects';
+import CarpinteriaMetalicaSection from './components/CarpinteriaMetalicaSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import PanelSandwichLanding from './components/PanelSandwichLanding';
@@ -40,6 +41,7 @@ const App: React.FC = () => {
         <section id="proyectos">
           <Projects />
         </section>
+        <CarpinteriaMetalicaSection />
         <section id="sectores" className="bg-slate-100">
           <Sectors />
         </section>

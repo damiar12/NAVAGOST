@@ -18,6 +18,7 @@ const Navbar: React.FC = () => {
     { name: 'Inicio', id: 'inicio' },
     { name: 'Servicios', id: 'servicios' },
     { name: 'Proyectos', id: 'proyectos' },
+    { name: 'Carpintería', id: 'carpinteria-metalica' },
     { name: 'Sectores', id: 'sectores' },
     { name: 'Nosotros', id: 'nosotros' },
     { name: 'Contacto', id: 'contacto' },
