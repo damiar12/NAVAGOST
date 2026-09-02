@@ -21,7 +21,7 @@ const gallery = [
   { src: '/carpinteria-metalica/soldador-carpinteria-metalica-navagost.png', alt: 'Soldador de Navagost fabricando carpintería metálica a medida en el taller de Castellón' },
   { src: '/carpinteria-metalica/reja-ventana-blanca.png', alt: 'Reja de ventana metálica blanca a medida instalada por Navagost' },
   { src: '/carpinteria-metalica/reja-ventana-negra.png', alt: 'Reja de ventana metálica negra a medida en vivienda de Castellón' },
-  { src: '/carpinteria-metalica/rejas-metalicas-local-comercial.png', alt: 'Rejas metálicas de seguridad instaladas en local comercial' },
+  { src: '/carpinteria-metalica/rejas-metalicas-local-comercial.jpeg', alt: 'Rejas metálicas de seguridad instaladas en local comercial' },
 ];
 
 const setMetaContent = (selector: string, content: string) => {
