@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -45,16 +45,28 @@ const Footer: React.FC = () => {
               <li>proyectos@navagost.com</li>
             </ul>
             <h4 className="font-bold uppercase tracking-widest text-xs mb-4 text-orange-500">Síguenos</h4>
-            <a
-              href="https://www.linkedin.com/in/navagost-metal-solutions-sl-3a04323b3"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn de Navagost"
-              className="inline-flex items-center space-x-2 text-slate-400 hover:text-white transition-colors"
-            >
-              <Linkedin size={20} />
-              <span className="text-sm font-semibold tracking-wider uppercase">LinkedIn</span>
-            </a>
+            <div className="flex flex-col space-y-3">
+              <a
+                href="https://www.linkedin.com/in/navagost-metal-solutions-sl-3a04323b3"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn de Navagost"
+                className="inline-flex items-center space-x-2 text-slate-400 hover:text-white transition-colors"
+              >
+                <Linkedin size={20} />
+                <span className="text-sm font-semibold tracking-wider uppercase">LinkedIn</span>
+              </a>
+              <a
+                href="https://www.instagram.com/navagostproyectos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Navagost"
+                className="inline-flex items-center space-x-2 text-slate-400 hover:text-white transition-colors"
+              >
+                <Instagram size={20} />
+                <span className="text-sm font-semibold tracking-wider uppercase">Instagram</span>
+              </a>
+            </div>
           </div>
         </div>
 
